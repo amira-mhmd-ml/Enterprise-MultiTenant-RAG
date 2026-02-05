@@ -17,7 +17,7 @@ graph TD
     E -->|Retrieve Context| F{Flashrank Reranker}
     F -->|Top Results| G[Groq / Llama 3.3]
     G -->|Final Answer| B
----
+
 ## 🚀 Key Technical Features
 
 ### 1. High-Precision Retrieval (Reranking)
