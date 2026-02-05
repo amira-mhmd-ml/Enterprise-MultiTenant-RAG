@@ -4,16 +4,20 @@ An advanced, production-ready Retrieval-Augmented Generation (RAG) system. This 
 
 ---
 
-## 🏗️ Project Architecture & Structure
+## 🏗️ Project Architecture & Flow
 
 The project is designed with a clear separation of concerns, featuring a robust **FastAPI** backend and an intuitive **Streamlit** frontend.
 
-**📁 Folder Hierarchy:**
-![Project Structure](./image_897c42.png) 
-*Clean modular structure for easy scalability.*
-
+```mermaid
+graph TD
+    A[User/Client] -->|Upload/Query| B(Streamlit Frontend)
+    B -->|REST API| C(FastAPI Backend)
+    C -->|Embeddings| D[HuggingFace Model]
+    D -->|Vectors| E[(Qdrant Vector DB)]
+    E -->|Retrieve Context| F{Flashrank Reranker}
+    F -->|Top Results| G[Groq / Llama 3.3]
+    G -->|Final Answer| B
 ---
-
 ## 🚀 Key Technical Features
 
 ### 1. High-Precision Retrieval (Reranking)
@@ -56,6 +60,7 @@ The system identifies specific frameworks and tools mentioned within the documen
 * **Frontend**: Streamlit
 * **Reranker**: Flashrank
 * **Embeddings**: HuggingFace `all-MiniLM-L6-v2`
+* **Observability: LangSmith
 
 ---
 
@@ -84,6 +89,19 @@ The system identifies specific frameworks and tools mentioned within the documen
    ```bash
    streamlit run frontend/app.py
    ```
+5. **🧪 Testing & Quality Assurance:**
+   ```bash
+   pytest
+   ```
+   
+**📈 Observability & Monitoring:**
+The pipeline is integrated with LangSmith to provide full trace visibility. This allows for:
+
+-Monitoring retrieval quality and Reranker performance.
+
+-Tracking latency and token costs.
+
+-Debugging complex chains to ensure response reliability.
 ---
 ## 🚦 Getting Started
 
