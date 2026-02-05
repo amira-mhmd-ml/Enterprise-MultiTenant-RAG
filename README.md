@@ -94,13 +94,15 @@ The system identifies specific frameworks and tools mentioned within the documen
    pytest
    ```
    
-**📈 Observability & Monitoring:**
-
- ->The pipeline is integrated with LangSmith to provide full trace visibility. This allows for:
-
-   1.Monitoring retrieval quality and Reranker performance.
-   2.Tracking latency and token costs.
-   3.Debugging complex chains to ensure response reliability.
+**📈 Observability & Monitoring: **
+```
+```
+ The pipeline is integrated with LangSmith to provide full trace visibility. This allows for:
+ ```
+```
+   1-Monitoring retrieval quality and Reranker performance.
+   2-Tracking latency and token costs.
+   3-Debugging complex chains to ensure response reliability.
 ---
 ## 🚦 Getting Started
 
