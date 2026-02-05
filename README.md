@@ -59,6 +59,32 @@ The system identifies specific frameworks and tools mentioned within the documen
 
 ---
 
+## ⚙️ Installation & Setup
+
+1. **Create Virtual Environment:**
+   ```bash
+   python -m venv venv
+   source venv/Scripts/activate  # On Windows
+   pip install -r requirements.txt
+2. ** Environment Variables: Create a .env file in the root directory:**
+   ```bash
+   GROQ_API_KEY=your_groq_api_key
+   QDRANT_HOST=localhost
+
+3. **Run with Docker (Qdrant):**
+   ```bash
+   docker-compose up -d
+
+4. **Launch Application:**
+   **Backend:**
+   ```bash
+   uvicorn backend.main:app --reload
+   ```
+   **Frontend**
+   ```bash
+   streamlit run frontend/app.py
+   ```
+---
 ## 🚦 Getting Started
 
 1. **Clone the Repo:**
