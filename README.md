@@ -95,13 +95,13 @@ The system identifies specific frameworks and tools mentioned within the documen
    ```
    
 **📈 Observability & Monitoring:**
-The pipeline is integrated with LangSmith to provide full trace visibility. This allows for:
+ ->The pipeline is integrated with LangSmith to provide full trace visibility. This allows for:
 
--Monitoring retrieval quality and Reranker performance.
+   -Monitoring retrieval quality and Reranker performance.
 
--Tracking latency and token costs.
+   -Tracking latency and token costs.
 
--Debugging complex chains to ensure response reliability.
+   -Debugging complex chains to ensure response reliability.
 ---
 ## 🚦 Getting Started
 
